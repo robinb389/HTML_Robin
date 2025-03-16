@@ -1,0 +1,151 @@
+.navbar{
+    padding: 10px;
+}
+
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero img{
+    height: 300px;
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(240, 248, 255, 0.567);
+}
+
+h1{
+    font-size: 3.5vw;
+    align-items: center;
+}
+
+.hero h2{
+    font-size: 2.3vw; /*mida de la font relativa a la pantalla*/
+    color: #615151; /*color del text*/
+    align-items: center;
+}
+
+
+.hero-imatge-developer{
+    width:250px;
+    height:200px;
+    margin:20px;
+    align-items: center;
+    /*alerta perquè pressuposem que la imatge és quadrada*/
+}
+
+h1{
+    font-size: 3.5vw; /*mida de la font relativa a la pantalla*/
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+    align-items: center;
+}
+
+
+.vast-shadow-regular {
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .dark-section{
+    color:white;  
+    background-color: #1b1b32; /*color de fons de la secció fosca*/
+  }
+  
+  
+  .about-me{
+    height: 400px;
+    padding:100px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    
+  }
+  
+  
+  .about-me div{
+    max-width: 600px;
+    text-align:center;
+  }
+  .section-title{
+    font-size: 2.5vw; /*mida de la font relativa a la pantalla*/
+    font-family:"Vast Shadow"; /*font de la capçalera*/
+    padding: 3px 0; /*espaiat entre la capçalera i el contingut*/    
+  }
+  .section-text{
+    font-size: 1vw; /*mida de la font relativa a la pantalla*/
+    padding: 30px 0; /*espaiat entre el text i el contingut*/    
+  }
+      
+  .experiencia-title{
+    font-size:2.5vw;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  .experiencia i{
+    font-size: 2vw;
+    color: #7ade30;
+    background-color:#0a0a23 ;
+    padding:8px 19px;
+    border-radius: 50%;
+  
+  
+  }
+  .columna{
+    margin-bottom: 10px;
+  }
+  
+  
+  .badges-contenedor{
+    font-size:1.5vw;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  
+  badge{
+    margin: 5px,
+  }
+  .badges-contenedor{
+    font-size:clamp(12px,1.5vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  .experiencia i{
+    font-size:clamp(14px,2vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
+    color: #7ade30;
+    background-color:#0a0a23 ;
+    padding:8px 19px;
+    border-radius: 50%;
+  
+  
+  }
+  .experiencia-title{
+    font-size:clamp(14px,2.5vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
+    font-weight: bold;
+    margin: 10px 0;
+  }
+          
+  
+
+@media screen and (max-width:768px) {
+    .navbar-brand{
+        display: none;
+    }
+
+    .section-title{
+        font-size: 4vw; /*mida de la font relativa a la pantalla*/
+        font-family:"Vast Shadow"; /*font de la capçalera*/
+        padding: 3px 0; /*espaiat entre la capçalera i el contingut*/    
+      }
+      .section-text{
+        font-size: 3vw; /*mida de la font relativa a la pantalla*/
+        padding: 30px 0; /*espaiat entre el text i el contingut*/    
+      }
+    
+}
