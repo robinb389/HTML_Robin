@@ -1,151 +1,262 @@
-.navbar{
-    padding: 10px;
+.navbar {
+  padding: 10px;
 }
 
-.navbar-collapse{
-    align-items: center;
-    justify-content: space-between;
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
 }
 
-.hero img{
-    height: 300px;
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(240, 248, 255, 0.567);
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 0%;
 }
 
-.hero{
-    display: flex;
-    justify-content: center;
-    background-color: rgba(240, 248, 255, 0.567);
+.hero div {
+  text-align: center;
+  padding-bottom: 0%;
 }
 
-h1{
-    font-size: 3.5vw;
-    align-items: center;
+.hero img {
+  height: 300px;
+  padding-bottom: 0%;
 }
 
-.hero h2{
-    font-size: 2.3vw; /*mida de la font relativa a la pantalla*/
-    color: #615151; /*color del text*/
-    align-items: center;
+.hero-imatge-developer {
+  width: 250px;
+  height: 200px;
+  margin: 20px auto;
 }
 
-
-.hero-imatge-developer{
-    width:250px;
-    height:200px;
-    margin:20px;
-    align-items: center;
-    /*alerta perquè pressuposem que la imatge és quadrada*/
+.hero h1, .hero h2 {
+  text-align: center;
 }
 
-h1{
-    font-size: 3.5vw; /*mida de la font relativa a la pantalla*/
-    font-family: "Press Start 2P", serif;
-    font-weight: 400;
-    font-style: normal;
-    align-items: center;
+h1 {
+  font-size: 3.5vw;
+  align-items: center;
 }
 
+.hero h2 {
+  font-size: 2.3vw;
+  color: #615151;
+  align-items: center;
+}
+
+.hero-imatge-developer {
+  width: 250px;
+  height: 200px;
+  margin: 20px;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3.5vw;
+  font-family: "Press Start 2P", serif;
+  font-weight: 400;
+  font-style: normal;
+  align-items: center;
+}
 
 .vast-shadow-regular {
-    font-family: "Vast Shadow", serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Vast Shadow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dark-section {
+  color: white;
+  background-color: #1b1b32;
+}
+
+.about-me {
+  height: 400px;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.about-me div {
+  max-width: 600px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5vw;
+  font-family: "Vast Shadow";
+  padding: 3px 0;
+}
+
+.section-text {
+  font-size: 1vw;
+  padding: 30px 0;
+}
+
+.experiencia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(280px, 40%, 400px);
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.experiencia-title {
+  font-size: clamp(18px, 2.5vw, 28px);
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.badges-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.badge {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+.experiencia i {
+  font-size: 3vw;
+  color: #7ade30;
+  background-color: #0a0a23;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.experiencia .columna {
+  border: 2px solid #8080804d;
+  transition: all 0.3s ease-in;
+}
+
+.experiencia .columna:hover {
+  color: white;
+  background-color: #1b1b32;
+  border: 2px solid #7ade30;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.text-center a.btn {
+  font-size: clamp(14px, 1.2vw, 18px);
+  padding: 12px 20px;
+  max-width: 250px;
+  width: 100%;
+}
+
+.projectes {
+  padding: 40px;
+}
+
+
+.projectes img{
+  height: 100%;
+  width: 100%;
+  padding:10px;
+  border-radius: 10px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+
+.projectes-container{
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+
+
+.overlay{
+  transition: all 0.3s ease;
+  opacity: 0;  /*transparència de la capa NO ES VEU*/
+  position: absolute;
+  top:50%;  /*al centre vertical */
+  left: 50%;   /* al centre horitzontal */
+  transform: translate(-50%, -50%);  
+  text-align: center;
+ }
+
+
+ .overlay p{
+  font-size:clamp(14px,2.5vw,30px); /*defineix el tamany mínim, màxim i òptim de la font*/    
+  margin-bottom: 0;
+ }
+
+
+.projecte {
+  position: relative;
+}
+
+
+.projecte:hover img {
+  opacity: 0.2;
+}
+
+
+.projecte:hover .overlay {
+  opacity: 1;
+}
+
+
+.overlay .icones-contenidor {
+  display: flex;
+  flex-direction: column; /*alineat en columnes del contingut*/
+  justify-content: center; /*centrat verticalment*/
+  align-items: center; /*centrat horitzontalment*/  
+}
+
+
+.overlay i {
+  color: black;
+  font-size: 60px;
+  margin: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar-brand {
+      display: none;
   }
 
-  .dark-section{
-    color:white;  
-    background-color: #1b1b32; /*color de fons de la secció fosca*/
+  .text-center a.btn {
+      font-size: 14px;
+      padding: 12px;
+      width: 90%;
   }
-  
-  
-  .about-me{
-    height: 400px;
-    padding:100px;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    
-  }
-  
-  
-  .about-me div{
-    max-width: 600px;
-    text-align:center;
-  }
-  .section-title{
-    font-size: 2.5vw; /*mida de la font relativa a la pantalla*/
-    font-family:"Vast Shadow"; /*font de la capçalera*/
-    padding: 3px 0; /*espaiat entre la capçalera i el contingut*/    
-  }
-  .section-text{
-    font-size: 1vw; /*mida de la font relativa a la pantalla*/
-    padding: 30px 0; /*espaiat entre el text i el contingut*/    
-  }
-      
-  .experiencia-title{
-    font-size:2.5vw;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  .experiencia i{
-    font-size: 2vw;
-    color: #7ade30;
-    background-color:#0a0a23 ;
-    padding:8px 19px;
-    border-radius: 50%;
-  
-  
-  }
-  .columna{
-    margin-bottom: 10px;
-  }
-  
-  
-  .badges-contenedor{
-    font-size:1.5vw;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  
-  badge{
-    margin: 5px,
-  }
-  .badges-contenedor{
-    font-size:clamp(12px,1.5vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  .experiencia i{
-    font-size:clamp(14px,2vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
-    color: #7ade30;
-    background-color:#0a0a23 ;
-    padding:8px 19px;
-    border-radius: 50%;
-  
-  
-  }
-  .experiencia-title{
-    font-size:clamp(14px,2.5vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
-    font-weight: bold;
-    margin: 10px 0;
-  }
-          
-  
 
-@media screen and (max-width:768px) {
-    .navbar-brand{
-        display: none;
-    }
+  .section-title {
+      font-size: 4vw;
+      font-family: "Vast Shadow";
+      padding: 3px 0;
+  }
 
-    .section-title{
-        font-size: 4vw; /*mida de la font relativa a la pantalla*/
-        font-family:"Vast Shadow"; /*font de la capçalera*/
-        padding: 3px 0; /*espaiat entre la capçalera i el contingut*/    
-      }
-      .section-text{
-        font-size: 3vw; /*mida de la font relativa a la pantalla*/
-        padding: 30px 0; /*espaiat entre el text i el contingut*/    
-      }
-    
+  .section-text {
+      font-size: 3vw;
+      padding: 30px 0;
+  }
 }
