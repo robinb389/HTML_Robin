@@ -1,0 +1,282 @@
+.navbar {
+    padding: 10px;
+    background-color: #f5f6f7; ;
+}
+
+
+/*distribució del menu*/
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero{
+  background-color: #f5f6f7;  /*definim el color de fons de la secció principal*/
+  min-height: 400; /*definim l'alçada mínima de la secció principal*/
+  /* fem servir altura mínima perquè si el contingut de la secció és més gran que l'alçada mínima, la secció s'ajustarà a la mida del contingut*/
+  text-align: center; /*centrem el text de la secció principal*/
+}
+
+section {
+  display:flex;
+  flex-direction: column; /*alineat en columnes del contingut*/
+  justify-content: center; /*centrat verticalment*/
+  align-items: center; /*centrat horitzontalment*/  
+}
+
+h1{
+    font-size: 4.5vw; /*mida de la font relativa a la pantalla*/
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero-imatge-developer{
+  width:300px;
+  height:300px;
+  margin:20px;
+  /*alerta perquè pressuposem que la imatge és quadrada*/
+}
+
+
+
+.dark-section{
+  color:white;  
+  background-color: #1b1b32; /*color de fons de la secció fosca*/
+}
+
+.hero h2{
+  font-size: 2.3vw; /*mida de la font relativa a la pantalla*/
+  color: #615151; /*color del text*/
+}
+
+.hero-inferior img{
+  width:20%;
+}
+
+.about-me{
+  height: 500px;
+  padding:5px;
+}
+
+.about-me div{
+  max-width: 600px;
+  text-align:center;
+}
+
+
+.section-text{
+  font-size: 1vw; /*mida de la font relativa a la pantalla*/
+  padding: 15px 0; /*espaiat entre el text i el contingut*/    
+}
+
+/*Estils generals*/
+.section-title{
+  font-size: 2.0vw; /*mida de la font relativa a la pantalla*/
+  font-family: "Emblema One", system-ui;
+  padding: 5px 0; /*espaiat entre la capçalera i el contingut*/    
+}
+
+.white-section{
+  color:black;  
+  background-color: white; /*color de fons de la secció clara*/
+}    
+
+.experiencia-title{
+  font-size:2.5vw;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.row{
+  padding: 40px 40px 60px 40px;
+}
+
+.columna{
+  margin-bottom: 10px;
+}
+
+.bi{
+  font-size:clamp(14px,2vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
+  color: #00ffff;
+  background-color:#0a0a23 ;
+  padding:8px 19px;
+  border-radius: 50%;
+}
+
+
+.badges-contenedor{
+  font-size:1.5vw;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size:clamp(12px,1.5vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.experiencia-title{
+  font-size:clamp(14px,2.5vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.row .columna{
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 2px solid #8080804d;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 2px solid #8080804d;
+  transition: all 0.3s ease-in;
+}
+
+.row .columna:hover{
+  color:white;
+  background-color: #1b1b32;
+  border: 2px solid #00eaff;
+}
+
+
+/*projectes-------------------------------------------------------------------------------------------------------------------------------*/
+.projectes {
+  padding: 40px;
+}
+
+.projectes img{
+  height: 100%;
+  width: 100%;
+  padding:10px;
+  border-radius: 10px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.projectes-container{
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+
+.overlay{
+  transition: all 0.3s ease;
+  opacity: 0;  /*transparència de la capa NO ES VEU*/
+  position: absolute;
+  top:50%;  /*al centre vertical */
+  left: 50%;   /* al centre horitzontal */
+  transform: translate(-50%, -50%);  
+  text-align: center;
+}
+
+.overlay p{
+  font-size:clamp(14px,2.5vw,30px); /*defineix el tamany mínim, màxim i òptim de la font*/
+  font-family: "Emblema One", system-ui;
+  margin-bottom: 0;
+}
+
+.projecte {
+  position: relative;
+}
+
+.projecte:hover img {
+  opacity: 0.2;
+}
+
+.projecte:hover .overlay {
+  opacity: 1;
+}
+
+.overlay .icones-contenidor {
+  display: flex;
+  flex-direction: column; /*alineat en columnes del contingut*/
+  justify-content: center; /*centrat verticalment*/
+  align-items: center; /*centrat horitzontalment*/  
+}
+
+.video{
+  position: relative;
+  width: 100%; /* Ajusta el div a l'ample que necessitis */
+  padding-top: 56.25%; /* Això manté una relació 16:9 (9 / 16 * 100) */
+}
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.projecte h2{
+  font-size:clamp(19px,2.5vw,30px); 
+  margin: 10px 0;
+}
+
+.projecte p{
+  font-size:clamp(14px,2vw,17px);  
+  margin: 10px 0 30px 0px;
+}
+
+
+/*footer----------------------------------------------------------------------------------------------------------------------------*/
+
+footer {
+  min-height: 500px;
+}
+
+.footer-logo {
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+}
+
+.footer-text {
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size:clamp(14px,1.5vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
+  font-family:"Press Start 2P", system-ui;; /*font de la capçalera*/
+}
+
+.a {
+  width: 70px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 10px;
+  border-radius: 5%;
+  transition: all 0.2s ease-in;
+}
+
+.social-icons i {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in;
+}
+
+
+.a:hover i {
+  color: #00ffee;;
+}
+
+.drets {
+  font-size: 15px;
+  color: #aeaeae;
+  padding: 20px;
+}
+
+/*distribució del menu en dispositius mòbils*/
+@media screen and (max-width: 768px) {
+  .navbar-brand {
+    display: none;
+  }    
+
+  /*Secció sobre mi*/
+  .about-me {
+    height: 200px;
+  }
+
+  /*tamany del botó */
+  .btn-responive {
+    font-size: 11px; padding: 6px 12px;
+  }
+}
