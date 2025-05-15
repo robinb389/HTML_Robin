@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whac-A-Mole</title>
+</head>
+<body>
+
+    <h1 class="titol">| Whac-A-Mole |</h1>
+
+    <div class="game-container">
+        <img id="imatge1" class="toposImg" onclick="star(this)" src="topoNo.jpg" alt="no-smile" width="200" height="150">
+        <img id="imatge2" class="toposImg" onclick="star(this)" src="topoNo.jpg" alt="no-smile" width="200" height="150">
+        <img id="imatge3" class="toposImg" onclick="star(this)" src="topoNo.jpg" alt="no-smile" width="200" height="150">
+        <img id="imatge4" class="toposImg" onclick="star(this)" src="topoNo.jpg" alt="no-smile" width="200" height="150">
+        <img id="imatge5" class="toposImg" onclick="star(this)" src="topoNo.jpg" alt="no-smile" width="200" height="150">
+        <img id="imatge6" class="toposImg" onclick="star(this)" src="topoNo.jpg" alt="no-smile" width="200" height="150">
+        <img id="imatge7" class="toposImg" onclick="star(this)" src="topoNo.jpg" alt="no-smile" width="200" height="150">
+        <img id="imatge8" class="toposImg" onclick="star(this)" src="topoNo.jpg" alt="no-smile" width="200" height="150">
+        <img id="imatge9" class="toposImg" onclick="star(this)" src="topoNo.jpg" alt="no-smile" width="200" height="150">
+    </div>
+
+    <p class="punts" id="punts">Points: 0</p>
+    <p class="temps" id="temps">Time: 30</p>
+    <p class="topos" id="topos"></p>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('bg.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .titol {
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #ac000000;
+            color: #000000;
+            padding: 30px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .toposImg {
+            margin: 15px;
+            transition: transform 0.2s ease;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .toposImg:hover {
+            transform: scale(1.05);
+        }
+
+        .punts, .topos, .temps {
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #000;
+            border-radius: 10px;
+            width: fit-content;
+        }
+
+        .punts {
+            background-color: #222;
+        }
+
+        .topos {
+            background-color: #444;
+        }
+
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            gap: 30px;
+            max-width: 900px;
+        }
+    </style>
+
+    <script>
+        let punts = 0;
+        let contadorTopos = 0;
+        let time = 30;
+
+        let audio = new Audio('boing.mp3');
+        let change = setInterval(changeFoto, 700);
+        let timer = setInterval(timecount, 1000);
+
+        function changeFoto() {
+            for (let i = 1; i <= 9; i++) {
+                document.getElementById("imatge" + i).src = "topoNo.jpg";
+            }
+
+            let aleatori = Math.trunc(Math.random() * 9) + 1;
+            document.getElementById("imatge" + aleatori).src = "topoSi.jpg";
+            contadorTopos++;
+        }
+
+        function star(x) {
+            if (x.src.includes("topoSi.jpg")) {
+                punts++;
+                audio.play();
+            } else {
+                punts--;
+            }
+
+            document.getElementById("punts").innerHTML = "Points: " + punts;
+            x.src = "topoPam.jpg";
+
+            if (punts == 10) {
+                document.getElementById("punts").innerHTML = "🎉 YOU WON ⭐";
+                document.getElementById("topos").innerHTML = contadorTopos + " MOLES HAVE APPEARED 🐀";
+                clearInterval(change);
+                clearInterval(timer);
+
+                for (let i = 1; i <= 9; i++) {
+                    document.getElementById("imatge" + i).src = "topoNo.jpg";
+                }
+            }
+        }
+
+        function timecount() {
+            time--;
+            document.getElementById("temps").innerHTML = "Time: " + time;
+
+            if (time <= 0) {
+                clearInterval(timer);
+                clearInterval(change);
+                document.getElementById("temps").innerHTML = "⏱️ Time's up!";
+
+                document.getElementById("punts").innerHTML = " YOU LOST ";
+            }
+        }
+    </script>
+</body>
+</html>
